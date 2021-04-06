@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:localstorage/src/errors.dart';
+import 'package:localstoragev2/src/errors.dart';
 
 import '../impl.dart';
 
@@ -34,6 +34,11 @@ class DirUtils implements LocalStorageImpl {
 
   @override
   dynamic getItem(String key) {
+    throw PlatformNotSupportedError();
+  }
+
+  @override
+  dynamic itemExists(String key) {
     throw PlatformNotSupportedError();
   }
 

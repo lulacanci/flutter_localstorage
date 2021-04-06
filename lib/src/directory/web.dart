@@ -42,6 +42,11 @@ class DirUtils implements LocalStorageImpl {
   }
 
   @override
+  dynamic itemExists(String key) {
+    return _data.containsKey(key);
+  }
+
+  @override
   Future<void> init([Map<String, dynamic> initialData = const {}]) async {
     _data = initialData;
     if (await exists()) {

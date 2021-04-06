@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:localstorage/src/errors.dart';
+import 'package:localstoragev2/src/errors.dart';
 import 'package:path_provider/path_provider.dart';
 
 import '../impl.dart';
@@ -55,6 +55,11 @@ class DirUtils implements LocalStorageImpl {
   @override
   dynamic getItem(String key) {
     return _data[key];
+  }
+
+  @override
+  dynamic itemExists(String key) {
+    return _data.containsKey(key);
   }
 
   @override

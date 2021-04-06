@@ -15,6 +15,8 @@ abstract class LocalStorageImpl {
   Future<void> setItem(String key, dynamic value);
 
   dynamic getItem(String key);
+  
+  dynamic itemExists(String key);
 
   Future<bool> exists();
 

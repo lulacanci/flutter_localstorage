@@ -59,6 +59,11 @@ class LocalStorage {
     return _dir.getItem(key);
   }
 
+  /// Returns if a value from storage by key
+  dynamic itemExists(String key) {
+    return _dir.itemExists(key);
+  }
+
   /// Saves item by [key] to a storage. Value should be json encodable (`json.encode()` is called under the hood).
   /// After item was set to storage, consecutive [getItem] will return `json` representation of this item
   /// if [toEncodable] is provided, it is called before setting item to storage
